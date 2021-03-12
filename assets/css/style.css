@@ -164,33 +164,30 @@ input {
     padding: 0 var(--mb-2);
 }
 
-.nav__logo,
+.logo__jobs,
 .nav__link {
     color: var(--first-color-dark);
     transition: 0.3s;
 }
-
-.nav__logo-img{
-    width: 92px;
-    height: 33px;
-    background-image: url('../img/Logo-kachina.png');
-    background-repeat: no-repeat;
-}
-
-/**/
-/*
-.nav__left{
+/*========LOGO========*/
+.nav__logo{
     display: flex;
     flex-direction: column;
 }
-
-.container-jobs{
-    display: flex;
-    justify-content: flex-end;
+.logo__jobs{
+    position: relative;
+    top: 2px;
+    text-align: end;
+    font-weight: var(--font-bold);
 }
-*/
+.logo__kchina{
+    position: relative;
+    bottom: var(--mb-1);
+    font-weight: 800;
+    color: var(--first-color-logo);
+    font-size: 20px;
+}
 
-/**/
 
 /*========NAV-2==========*/
 .nav__menu{
