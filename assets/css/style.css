@@ -1,0 +1,246 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+    --header-height: 4rem;
+
+    /*=====COLORS=====*/
+    --first-color: #FDFEFE;
+    --first-color-dark: #121212;
+    --text-color: #524748;
+    --first-color-light: #7b6f71;
+    --first-color-lighten: #fbf9f9;
+    --first-color-logo: #F28E13;
+
+    /*=====MARGENES=====*/
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+
+    /*===== Font and typography =====*/
+    --body-font: "Poppins", sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /*===== Font weight =====*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    background-color: var(--first-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    background-image: none;
+    background-color: transparent;
+}
+
+input {
+    outline: none;
+}
+.button{
+    color: var(--first-color-dark);
+}
+
+.bx{
+    font-size: 20px;
+}
+
+/*========LAYOUT==========*/
+.bd-container {
+    /*max-width: 1024px;*/
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+}
+
+.l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+
+/*========NAV-1==========*/
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.min-width-750{
+    display: none;
+}
+
+.nav__center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-category{
+    padding-right: var(--mb-3);
+}
+
+.nav__search {
+    height: 2rem;
+    border: 1px solid var(--first-color-logo);
+    border-radius: 50px;
+}
+
+.form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.button,
+.text-input {
+    border: 0;
+}
+.text-input {
+    height: 80%;
+    padding: 0 var(--mb-1);
+}
+
+.nav__right {
+    min-width: 260px;
+    width: 260px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__item-sign{    
+    height: 2rem;
+    border: 1px solid var(--first-color-logo);
+    border-radius: 6px;
+}
+
+.nav__link.sign-up,
+.nav__link.sign-in {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 var(--mb-2);
+}
+
+.nav__logo,
+.nav__link {
+    color: var(--first-color-dark);
+    transition: 0.3s;
+}
+
+.nav__logo-img{
+    width: 92px;
+    height: 33px;
+    background-image: url('../img/Logo-kachina.png');
+    background-repeat: no-repeat;
+}
+
+/**/
+/*
+.nav__left{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-jobs{
+    display: flex;
+    justify-content: flex-end;
+}
+*/
+
+/**/
+
+/*========NAV-2==========*/
+.nav__menu{
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: var(--header-height);
+    left: -100%;
+    transition: .5s;
+    background-color: #F28E13;
+}
+
+.nav__item{
+    padding-left: var(--mb-2);
+    margin-bottom: var(--mb-1);
+}
+
+/* Show menu */
+.show-menu{
+    left: 0;
+}
+
+/*========MEDIA QUERY==========*/
+@media screen and (max-width: 750px){
+    .max-width-750{
+        display: flex;
+    }
+    .min-width-750{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 750px){
+    .min-width-750{
+        display: flex;
+    }
+    .max-width-750{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 950px){
+    .text-input{
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .text-input{
+        width: 350px;
+    }
+}
