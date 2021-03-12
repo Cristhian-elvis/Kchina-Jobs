@@ -58,7 +58,7 @@ body {
     line-height: 1.6;
 }
 
-ul {
+ul, li {
     padding: 0;
     list-style: none;
 }
@@ -118,6 +118,32 @@ input {
 .button-category{
     padding-right: var(--mb-3);
 }
+
+/**categoria*/
+.nav-category{
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+}
+
+.drop-category{
+    display: none;
+    position: fixed;
+    top: var(--header-height);
+    background: #F28E13;
+    transition-delay: 5s;
+}
+
+.nav__list{
+    display: grid;
+    row-gap: .6rem;
+    margin: var(--mb-2) var(--mb-2);
+}
+
+.nav-category:hover .drop-category{
+    display: flex;
+}
+
 
 .nav__search {
     width: 50%;
@@ -200,11 +226,6 @@ input {
     left: -100%;
     transition: .5s;
     background-color: #F28E13;
-}
-
-.nav__item{
-    padding-left: var(--mb-2);
-    margin-bottom: var(--mb-1);
 }
 
 /* Show menu */
