@@ -35,6 +35,12 @@
     --font-medium: 500;
     --font-semi-bold: 600;
     --font-bold: 700;
+
+    /*===== Z Index =====*/
+    --z-index-nav-1: 10;
+    --z-index-nav-2: 20;
+    --z-index-nav-3: 30;
+    --z-index-nav-4: 40;
 }
 
 /*===== BASE =====*/
@@ -93,6 +99,7 @@ input {
 
 .l-header {
     width: 100%;
+    height: var(--header-height);
     position: fixed;
     top: 0;
     left: 0;
@@ -117,6 +124,12 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--first-color);
+
+    position: fixed;
+}
+.section-one{
+    z-index: var(--z-index-nav-2);
 }
 /*========Nav Left========*/
 /*-------Logo------*/
@@ -224,7 +237,10 @@ input {
     transition: 0.3s;
 }
 
-/*========NAV-2==========*/
+/**========NAV-2==========*/
+.section-two{
+    z-index: var(--z-index-nav-3);
+}
 .nav__menu{
     width: 250px;
     height: 100%;
@@ -242,9 +258,25 @@ input {
     border-top: 1px solid #d1d7dc;
 }
 
+/**========NAV-3==========*/
+.section-three{
+    position: fixed;
+    top: 0;
+    z-index: var(--z-index-nav-1);
+}
+.section-three .nav__search{
+    width: 100%;
+    border: 0;
+}
+
 /* Show menu */
 .show-menu{
     left: 0;
+}
+
+/* Show nav-three*/
+.show-nav{
+    z-index: var(--z-index-nav-4);
 }
 
 /*========MEDIA QUERY==========*/

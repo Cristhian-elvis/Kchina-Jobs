@@ -20,7 +20,7 @@
         <!--========HEADER========-->
         <header class="l-header">
             <!--=====NAV-1=====-->
-            <nav class="nav bd-container min-width-750">
+            <nav class="nav bd-container min-width-750 section-one">
                 <div class="nav__logo">
                     <a href="./index.html" class="logo__jobs text-color-dark"
                         >Jobs</a
@@ -89,7 +89,7 @@
             </nav>
 
             <!--=====NAV-2=====-->
-            <nav class="nav bd-container max-width-750">
+            <nav class="nav bd-container max-width-750 section-two">
                 <div class="nav__left">
                     <a href="#" class="nav__toggle" id="nav-toggle">
                         <i class="bx bx-menu"></i>
@@ -108,8 +108,8 @@
                 <div class="nav__rigth">
                     <a
                         href="#"
-                        class="nav__toggle-search"
-                        id="nav-toggle-search"
+                        class="toggle-search"
+                        id="toggle-search"
                     >
                         <i class="bx bx-search"></i>
                     </a>
@@ -170,6 +170,25 @@
                         </li>
                     </ul>
                 </div>
+            </nav>
+
+            <!--=====NAV-3=====-->
+            <nav class="nav bd-container section-three" id="section-three">
+                <div class="nav__search" id="nav-search">
+                    <form action="" class="form">
+                        <button type="submit" class="text-color-dark">
+                            <i class="bx bx-search"></i>
+                        </button>
+                        <input
+                            placeholder="Buscar"
+                            type="text"
+                            class="text-input"
+                        />
+                    </form>
+                </div>
+                <a href="#" class="close-toggle-search" id="close-toggle-search">
+                    <i class='bx bx-x'></i>
+                </a>
             </nav>
         </header>
 
