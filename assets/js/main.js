@@ -1,15 +1,30 @@
 /*===== SHOW MENU =====*/
-const showMenu = (toggleId, navId) =>{
+const showMenu = (toggleId, navId, navOpacityId) =>{
     const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+    nav = document.getElementById(navId),
+    navOpacity = document.getElementById(navOpacityId);
 
-    if(toggle && nav){
+    if(toggle && nav && navOpacity){
         toggle.addEventListener('click', ()=>{
             nav.classList.toggle('show-menu');
+            navOpacity.classList.toggle('show-nav-opacity');
         });
+
+        closeMenu(navOpacity, nav);
     }
 }
-showMenu('nav-toggle', 'nav-menu');
+function closeMenu(toggle, nav) {
+    toggle.addEventListener('click', () => {
+        nav.classList.remove('show-menu');
+        toggle.classList.remove('show-nav-opacity');
+    })
+}
+function abc(){
+    
+}
+showMenu('nav-toggle', 'nav-menu', 'nav-menu-opacity');
+
+
 
 /*===== SHOW NAV SECTION THREE =====*/
 const showNav = (toggleId, navSearchId, closeTogleId) => {
